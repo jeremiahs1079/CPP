@@ -1,0 +1,75 @@
+@import 'https://nmsu.evaluationkit.com/CanvasScripts/nmsu.css';
+/* replace the aqua green background with something that matches your color scheme.*/
+#header {
+  /*you can use .pngs with alpha transparency since you dont have to worry about IE6*/
+  background: url("nm_header_bg.jpg?v1") repeat-x scroll left center transparent;
+}
+
+/*replace the "Canvas" logo with your school's*/
+#header-logo, #header.no-user #header-logo {
+  background: url("nm_header_logo.png?v1") no-repeat scroll 0 0 transparent;
+  bottom: 10px;
+  height: 50px;
+  left: 6px;
+  width: 191px;
+}
+/* if you are going to replace the Canvas logo on the top left with your school's, 
+you should move a (smaller) Cavas logo to the right side of the header'*/
+#header-logo-secondary {
+  /* note, you should set up you webserver to set the right headers to cache these 
+     images you link to for a long time (eg: 1 year) and change the querystring 
+     (the part that says "?v1") to force users to download a new version if you 
+     change it, see: http://developer.yahoo.com/performance/rules.html#expires */
+  background: url("header_canvas_logo.png?v1") no-repeat scroll 0 0 transparent;
+  bottom: 11px;
+  height: 26px;
+  position: absolute;
+  right: 26px;
+  width: 135px;
+  display: block;
+}
+/*make room for the menu since my sample logo is bigger than default canvas logo*/
+#menu{ margin-left: 200px; }
+/**.menu-item .menu-item-title{background:url(menu_arrow.png?v1) no-repeat right 17px;padding-right:27px}**/
+
+/*make the menu lettering white and make it go back to grey when you hover over*/
+.menu-item .menu-item-title, .menu-item .menu-item-no-drop { color: #FFFFFF; }
+.menu-item.hover .menu-item-title { color: #555555; }
+
+/*style the #identity (the thing that says "Ryan Shaw | inbox | profile | logout | (feedback)" in top right) */
+#identity { background: none; }
+#identity { background-color: #eee; }
+#identity .user_name a{ color: #882345 !important; }
+#identity a { color: #333; }
+#identity b { color: #fff; }
+#identity #feedback_link{ border-color: #333; background-color: #333; }
+#identity .inbox a .unread-messages-count { background-color: #DF7A00; }
+#identity #identity-help-container a { color: orange !important; }
+
+/* ***************************************** */
+/* login page */
+/* replace canvas logo with learn.nmsu.edu logo */
+body.modal #modal-box.login-box h1{height:120px;width: 470px;margin: 30px auto;background: transparent url(learn-login-logo.png) no-repeat;text-indent:-999em;float: none;}
+/* change color of forgot password link */
+body.modal #modal-box.login-box a{color:#eee!important}
+body.modal #modal-box.login-box a:hover{color:#fff!important}
+
+/* change background color of login box */ 
+body.modal #modal-box.login-box{background-color:#882345;background-image:-webkit-gradient(linear,left top,left bottom,from(#e43a73),to(#882345));background-image:-webkit-linear-gradient(top,#e43a73,#882345);background-image:-moz-linear-gradient(top,#e43a73,#882345);background-image:-ms-linear-gradient(top,#e43a73,#882345);background-image:-o-linear-gradient(top,#e43a73,#882345);background-image:linear-gradient(top,#e43a73,#882345);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#e43a73',EndColorStr='#882345')";zoom:1;background:url(Money_Noise_tm.png?1343667624),-webkit-gradient(radial,50% -100px,0,50% -100px,100,color-stop(0%,rgba(255,255,255,0.6)),color-stop(100%,transparent)),-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#59656e),color-stop(100%,#882345));background:url(Money_Noise_tm.png?1343667624),-webkit-radial-gradient(50% -100px,circle cover,rgba(140,11,66,0.6) 0,transparent 100%),-webkit-linear-gradient(top,#e43a73,#882345);background:url(Money_Noise_tm.png?1343667624),-moz-radial-gradient(50% -100px,circle cover,rgba(140,11,66,0.6) 0,transparent 100%),-moz-linear-gradient(top,#e43a73,#882345);background:url(Money_Noise_tm.png?1343667624),-o-radial-gradient(50% -100px,circle cover,rgba(140,11,66,0.6) 0,transparent 100%),-o-linear-gradient(top,#e43a73,#882345);background:url(Money_Noise_tm.png?1343667624),radial-gradient(50% -100px,circle cover,rgba(140,11,66,0.6) 0,transparent 100%),linear-gradient(top,#e43a73,#882345);height:331px;width:623px;padding:20px;color:#b3b3b3;border:none}
+
+/* change background color of login button */
+#login_form .btn-primary {color: #000000; border-bottom: #000;background-color:#ccc;background-image:-moz-linear-gradient(top,#e6e6e3,#c0c0c0);background-image:-ms-linear-gradient(top,#e6e6e3,#c0c0c0);background-image:-webkit-gradient(linear,0 0,0 100%,from(#e6e6e3),to(#c0c0c0));background-image:-webkit-linear-gradient(top,#e6e6e3,#c0c0c0);background-image:-o-linear-gradient(top,#e6e6e3,#c0c0c0);background-image:linear-gradient(top,#e6e6e3,#c0c0c0);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFe6e6e3',endColorstr='#FFc0c0c0',GradientType=0);border-color:#c0c0c0 #c0c0c0 #005c8a;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1),15%);*background-color:#DF7A00;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false)}
+
+#login_form .btn-primary:hover,#login_form .btn-primary:active,#login_form .btn-primary.active,#login_form .btn-primary.disabled,#login_form .btn-primary[disabled]{background-color:#bbb;*background-color:#bbb; color:#000}
+#login_form .btn-primary:active, #login_form .button-default:active, #login_form .btn-primary.active,.active.button-default{background-color:#006da3 \9}
+.btn-warning{background-color:#f9a732;background-image:-moz-linear-gradient(top,#fbb450,#f89406);background-image:-ms-linear-gradient(top,#fbb450,#f89406);background-image:-webkit-gradient(linear,0 0,0 100%,from(#fbb450),to(#f89406));background-image:-webkit-linear-gradient(top,#fbb450,#f89406);background-image:-o-linear-gradient(top,#fbb450,#f89406);background-image:linear-gradient(top,#fbb450,#f89406);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFBB450',endColorstr='#FFF89406',GradientType=0);border-color:#f89406 #f89406 #ad6704;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) fadein(rgba(0,0,0,0.1),15%);*background-color:#f89406;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false)}
+
+
+#flash_notice_message, #flash_error_message { background-color: #8DC34B !important; } /* Changes the background color of the flash notice. This is what you see at the top of the page when you login. */
+
+#footer { margin: 0px auto !important; } /* Optional I moved the footer to be more consistent with our look. */
+.forgot_password_link {display: none;} /* Optional I hide the Forgot your Password link because we are using LDAP. We are still discussing whether or not this is a good idea. This means that anyone with a canvas internal account won't be able to change their password. */
+
+#modal-box h2 { margin: 55px 10px 0; } /* Optional login-bg.jpg is also used on the confirm registration page. Our logo is in the upper left and the text on the page overlapped it so I moved the whole registration form down.*/
+
+#flash_notice_message,#flash_error_message{background-color:#eaab0d !important;color:#222;font-weight:bold;}
